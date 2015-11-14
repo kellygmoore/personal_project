@@ -1,0 +1,89 @@
+/* Styles go here */
+
+body {
+    font-family: Arial;
+    background-image: url("/assets/views/bkgd_5.jpg");
+    /*background-color: navy;*/
+}
+
+.bigDiv {
+    background-color: white;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    border-top: 2px solid red;
+}
+
+.mainBody {
+    border: 1px solid black;
+}
+
+h3 {
+    margin: 30px 0 20px 65px;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+}
+
+.as-sortable-item,
+.as-sortable-placeholder {
+    width: 120px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    list-style: none;
+    color: whitesmoke;
+    /*display: inline-block;*/
+    /*float: left;*/
+    text-align: center;
+}
+
+.as-sortable-placeholder {
+    border: 1px dotted #0000ff !important;
+}
+
+#sortable-container {
+    display: inline-block;
+}
+
+.column {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+span {
+    font-size: 32px;
+    font-family: Arial;
+}
+
+#word1 {
+    background-color: purple;
+}
+
+#word2 {
+    background-color: orangered;
+}
+
+#word3 {
+    background-color: forestgreen;
+}
+
+#word4 {
+    background-color: blue;
+}
+
+#number1 {
+    background-color: red;
+    width: 150px;
+}
+
+#number1 span {
+    font-size: 26px;
+}
+
+.nav {
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+}
