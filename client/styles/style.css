@@ -2,15 +2,16 @@
 
 body {
     font-family: Arial;
-    background-image: url("/assets/views/bkgd_5.jpg");
+    background-image: url("/assets/views/brushed_alu_dark.png");
     /*background-color: navy;*/
 }
 
 .bigDiv {
     background-color: white;
-    width: 80%;
+    width: 90%;
     margin: 40px auto 0 auto;
-    border-top: 2px solid red;
+    border: 3px solid red;
+    border-radius: 15px;
 }
 
 .mainBody {
@@ -28,12 +29,12 @@ img {
 
 .as-sortable-item,
 .as-sortable-placeholder {
-    width: 120px;
-    margin: 5px;
+    width: 200px;
+    margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
     list-style: none;
-    color: whitesmoke;
+    color: white;
     /*display: inline-block;*/
     /*float: left;*/
     text-align: center;
@@ -57,29 +58,14 @@ span {
     font-family: Arial;
 }
 
-#word1 {
-    background-color: purple;
+#answerBlocks {
+    /*background-color: midnightblue;*/
+    background: radial-gradient(orangered, darkred);
+    box-shadow: 3px 3px 4px black;
 }
 
-#word2 {
-    background-color: orangered;
-}
-
-#word3 {
-    background-color: forestgreen;
-}
-
-#word4 {
-    background-color: blue;
-}
-
-#number1 {
-    background-color: red;
-    width: 150px;
-}
-
-#number1 span {
-    font-size: 26px;
+#answerBlocks span {
+    font-size: 22px;
 }
 
 .nav {
