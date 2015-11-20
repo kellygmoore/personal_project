@@ -1,14 +1,20 @@
 <div ng-controller="MainCtrl">
     <div class="mainBody">
-        <h3>inOrder these U.S. cities from east to west</h3>
-        <div class="container-fluid">
-            <ul ng-model="word1" as-sortable="sortableOptions">
-                <li ng-repeat="item in word1" as-sortable-item class="as-sortable-item" id="answerBlocks">
+        <div class="gameDiv">
+            <h3>inOrder these U.S. cities from east to west</h3>
+        </div>
+        <div class="container-fluid gameDiv">
+            <ul ng-model="question1" as-sortable="sortableOptions">
+                <li ng-repeat="answer in question1" as-sortable-item class="as-sortable-item answerBlocks">
                     <div as-sortable-item-handle class="as-sortable-item-handle sortElement" style="height:50px">
-                        <span data-ng-bind="item.name"></span>
+                        <span data-ng-bind="answer.name"></span>
                     </div>
                 </li>
             </ul>
+        </div>
+        <div>
+
+            <button class="buttonClass" ng-click="checkAnswers()">Check Order</button>
         </div>
         <br>
         <br>

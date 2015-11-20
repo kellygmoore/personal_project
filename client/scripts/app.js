@@ -15,33 +15,38 @@ myApp.config(["$routeProvider", function($routeProvider){
         })
 }]);
 
-myApp.controller('MainCtrl', ["$scope", function ($scope) {
+myApp.controller('MainCtrl', ["$scope", function($scope) {
 
-    $scope.word1 = [{
-        name: 'Honolulu'
+    $scope.question1 = [{
+        name: 'Honolulu',
+        id: 5
     }, {
-        name: 'Dayton'
+        name: 'Dayton',
+        id: 2
     }, {
-        name: 'Fargo'
+        name: 'Fargo',
+        id: 3
     }, {
-        name: 'Phoenix'
+        name: 'Phoenix',
+        id: 4
     }, {
-        name: 'Washington D.C.'
+        name: 'Washington D.C.',
+        id: 1
     }];
-
-
-    $scope.numberlist1 = [{
-        name: '67+24+18'
-    } , {
-        name: '1000/10'
-    } , {
-        name: '4x4x4'
-    } , {
-        name: '450-220-43'
-    }];
-
 
     $scope.sortableOptions = {
         containment: '#sortable-container'
     };
+
+    $scope.checkAnswers = function() {
+        var counter = 0;
+        for(i=0; i<$scope.question1.length; i++){
+            if ($scope.question1[i].id === (i+1)) {
+                console.log(i, " is correct!");
+                counter++;
+            }
+        }
+        console.log("The counter is at: ", counter);
+    }
+
 }]);
