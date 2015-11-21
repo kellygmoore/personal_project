@@ -1,19 +1,23 @@
 <div ng-controller="MainCtrl">
     <div class="mainBody">
-        <div class="gameDiv">
-            <h3>inOrder these U.S. cities from east to west</h3>
-        </div>
-        <div class="container-fluid gameDiv">
-            <ul ng-model="question1" as-sortable="sortableOptions">
-                <li ng-repeat="answer in question1" as-sortable-item class="as-sortable-item answerBlocks">
-                    <div as-sortable-item-handle class="as-sortable-item-handle sortElement" style="height:50px">
-                        <span data-ng-bind="answer.name"></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div>
+        <div class="gameDiv row">
+            <div id="middle" class="col-md-4">
+                <h1>inOrder these U.S. cities from east to west</h1>
+            </div>
 
+            <div class="container-fluid col-md-4 col-md-offset-2">
+                <ul ng-model="question1" as-sortable="sortableOptions">
+                    <li ng-repeat="answer in question1" as-sortable-item class="as-sortable-item answerBlocks">
+                        <div as-sortable-item-handle class="as-sortable-item-handle sortElement" style="height:50px">
+                            <span data-ng-bind="answer.name"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="bottomDiv col-md-10">
             <button class="buttonClass" ng-click="checkAnswers()">Check Order</button>
         </div>
         <br>
