@@ -9,27 +9,31 @@ body {
     background-color: white;
     width: 80%;
     margin: 40px auto 0 auto;
-    border: 3px solid red;
+    border: 3px ridge red;
     border-radius: 20px;
 }
 
+.mainBody {
+    /*border: 1px dashed black;*/
+    margin: 20px auto 0 auto;
+}
+
 .gameDiv {
-    height: 500px;
-    border: 1px solid green;
+    height: 450px;
+    /*border: 1px solid green;*/
 }
 
 #middle {
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
+}
+
+.headerDiv {
+    /*border-bottom: 2px solid blue;*/
 }
 
 .bottomDiv {
     border: 1px dashed blue;
-}
-
-.mainBody {
-    border: 1px dashed black;
-    margin: 20px auto 0 auto;
 }
 
 h1 {
@@ -68,11 +72,6 @@ img {
     border-radius: 5px;
 }
 
-span {
-    //font-size: 32px;
-    text-shadow: 1px 1px 2px black;
-}
-
 .answerBlocks {
     background: radial-gradient(orangered, darkred);
     box-shadow: 3px 3px 4px black;
@@ -80,10 +79,31 @@ span {
 
 .answerBlocks span {
     font-size: 22px;
+    text-shadow: 1px 1px 2px black;
 }
 
-.nav {
-    color: black;
-    font-family: Arial;
-    font-size: 20px;
+#pointsDifficultyDiv {
+    text-align: right;
+    /*border: 1px dashed blue;*/
+    height: 100px;
+}
+
+#categoryTitleDiv {
+    font-size: 48px;
+    text-align: center;
+    /*border: 1px dashed blue;*/
+    height: 100px;
+}
+
+#logoDiv {
+    /*border: 1px dashed blue;*/
+    height: 100px;
+}
+
+#ptsSpan {
+    color: darkblue;
+}
+
+#diffSpan {
+    color: purple;
 }
