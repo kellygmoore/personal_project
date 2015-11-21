@@ -1,35 +1,36 @@
-/* Styles go here */
 
 body {
     font-family: 'Fredoka One', cursive, Arial;
-    background-image: url("/assets/views/subtle_white_mini_waves.png");
+    background-color: darkblue;
+    /*background-image: url("/assets/views/bkgd_1.jpg");*/
 }
 
 .bigDiv {
     background-color: white;
     width: 80%;
     margin: 40px auto 0 auto;
-    border: 3px ridge red;
+    border: 8px ridge red;
     border-radius: 20px;
 }
 
 .mainBody {
-    /*border: 1px dashed black;*/
     margin: 20px auto 0 auto;
 }
 
 .gameDiv {
     height: 450px;
-    /*border: 1px solid green;*/
+    border: 1px dashed green;
 }
 
 #middle {
     margin-top: 70px;
     text-align: center;
+    border: 1px dashed blue;
 }
 
 .headerDiv {
-    /*border-bottom: 2px solid blue;*/
+    border-bottom: 2px ridge black;
+    height: 5px;
 }
 
 .bottomDiv {
@@ -54,8 +55,6 @@ img {
     list-style: none;
     color: white;
     padding-top: 15px;
-    /*display: inline-block;*/
-    /*float: left;*/
     text-align: center;
 }
 
@@ -72,6 +71,16 @@ img {
     border-radius: 5px;
 }
 
+.buttonClass {
+    width: 175px;
+    border: 1px solid black;
+    font-size: 22px;
+    border-radius: 5px;
+    text-align: center;
+    background: radial-gradient(white, gold);
+    box-shadow: 3px 3px 4px black;
+}
+
 .answerBlocks {
     background: radial-gradient(orangered, darkred);
     box-shadow: 3px 3px 4px black;
@@ -84,19 +93,22 @@ img {
 
 #pointsDifficultyDiv {
     text-align: right;
-    /*border: 1px dashed blue;*/
     height: 100px;
 }
 
 #categoryTitleDiv {
     font-size: 48px;
     text-align: center;
-    /*border: 1px dashed blue;*/
+    /*text-shadow: 3px 3px 3px gold;*/
     height: 100px;
+    text-shadow:
+    -1px -1px 0 gold,
+    1px -1px 0 gold,
+    -1px 1px 0 gold,
+    1px 1px 0 gold;
 }
 
 #logoDiv {
-    /*border: 1px dashed blue;*/
     height: 100px;
 }
 

@@ -19,19 +19,19 @@ myApp.controller('MainCtrl', ["$scope", function($scope) {
 
     $scope.question1 = [{
         name: 'Honolulu',
-        id: 5
+        id: 1
     }, {
         name: 'Dayton',
-        id: 2
+        id: 4
     }, {
         name: 'Fargo',
         id: 3
     }, {
         name: 'Phoenix',
-        id: 4
+        id: 2
     }, {
         name: 'Washington D.C.',
-        id: 1
+        id: 5
     }];
 
     $scope.sortableOptions = {
