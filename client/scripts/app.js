@@ -4,14 +4,26 @@ var myApp = angular.module("myApp", ['as.sortable', 'ngRoute']);
 
     myApp.config(["$routeProvider", function($routeProvider){
     $routeProvider.
-        when('/home', {
-            templateUrl: "assets/views/routes/home.html"
+        when('/start', {
+            templateUrl: "assets/views/routes/start.html"
         }).
-        when('/sortbynumber', {
-            templateUrl: "assets/views/routes/sortbynumber.html"
+        when('/login', {
+            templateUrl: "assets/views/routes/login.html"
+        }).
+        when('/register', {
+            templateUrl: "assets/views/routes/register.html"
+        }).
+        when('/category', {
+            templateUrl: "assets/views/routes/category.html"
+        }).
+        when('/questionpage', {
+            templateUrl: "assets/views/routes/questionpage.html"
+        }).
+        when('/completion', {
+            templateUrl: "assets/views/routes/completion.html"
         }).
         otherwise({
-            redirectTo: 'home'
+            redirectTo: 'start'
         })
 }]);
 
@@ -56,6 +68,16 @@ myApp.controller('MainCtrl', ["$scope", function($scope) {
         }
         console.log("The counter is at: ", $scope.counter);
         //return $scope.counter;
+    }
+
+}]);
+
+myApp.controller('InstructionsCtrl', ["$scope", function($scope) {
+
+    $scope.flip = true;
+
+    $scope.showInstructions = function(){
+        $scope.flip = false;
     }
 
 }]);

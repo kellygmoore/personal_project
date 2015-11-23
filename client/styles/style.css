@@ -106,6 +106,11 @@ img {
     1px 1px 0 gold;
 }
 
+.bigLogoDiv img {
+    width: 250px;
+    height: auto;
+}
+
 #logoDiv {
     height: 100px;
 }
@@ -122,10 +127,7 @@ img {
     display: block;
     float: right;
 }
-/*.buttonDiv {*/
-    /*/!*border: 1px dashed blue;*!/*/
-    /*float: right;*/
-/*}*/
+
 #showNumberCorrect {
     margin-top: 20px;
     color: red;
