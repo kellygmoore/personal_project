@@ -2,7 +2,7 @@
 
 var myApp = angular.module("myApp", ['as.sortable', 'ngRoute']);
 
-myApp.config(["$routeProvider", function($routeProvider){
+    myApp.config(["$routeProvider", function($routeProvider){
     $routeProvider.
         when('/home', {
             templateUrl: "assets/views/routes/home.html"
@@ -38,15 +38,24 @@ myApp.controller('MainCtrl', ["$scope", function($scope) {
         containment: '#sortable-container'
     };
 
+    $scope.trueOrFalse = true;
+    $scope.showNextArrow = true;
+
     $scope.checkAnswers = function() {
-        var counter = 0;
+        $scope.counter = 0;
+        $scope.trueOrFalse = false;
         for(i=0; i<$scope.question1.length; i++){
             if ($scope.question1[i].id === (i+1)) {
                 console.log(i, " is correct!");
-                counter++;
+                $scope.counter++;
             }
         }
-        console.log("The counter is at: ", counter);
+        if($scope.counter === 5){
+            $scope.showNextArrow = false;
+            $scope.trueOrFalse = true;
+        }
+        console.log("The counter is at: ", $scope.counter);
+        //return $scope.counter;
     }
 
 }]);

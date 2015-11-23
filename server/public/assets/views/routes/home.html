@@ -4,8 +4,15 @@
         <div class="gameDiv row">
             <div id="middle" class="col-md-4">
                 <h1>Put these U.S. cities inOrder from west to east:</h1>
-                <div class="bottomDiv">
-                    <button class="buttonClass" ng-click="checkAnswers()">Check Order</button>
+                <div class="buttonDiv" ng-model="answerSolution">
+                    <button class="buttonClass" ng-click="checkAnswers()">Check Order</button><br>
+                </div>
+                <div class="correctStatusDiv">
+                    <p ng-hide="trueOrFalse" id="showNumberCorrect">{{counter}}/5 are in the correct order</p><br>
+                </div>
+                <div class="moveOnDiv">
+                    <p ng-hide="showNextArrow">inOrder Success!</p>
+                    <p ng-hide="showNextArrow" id="showNextArrow">Next Question<img src="assets/views/nextarrow.png" alt="next arrow"</p>
                 </div>
             </div>
 
@@ -18,11 +25,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
-
-
-        <br>
-        <br>
     </div>
 </div>

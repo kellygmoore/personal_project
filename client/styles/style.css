@@ -1,8 +1,9 @@
 
 body {
-    font-family: 'Fredoka One', cursive, Arial;
+    font-family: 'Fredoka One', Arial, sans-serif;
     background-color: darkblue;
-    /*background-image: url("/assets/views/bkgd_1.jpg");*/
+    /*background-image: url("/assets/views/blue2.jpg");*/
+    /*background-repeat: no-repeat;*/
 }
 
 .bigDiv {
@@ -19,22 +20,18 @@ body {
 
 .gameDiv {
     height: 450px;
-    border: 1px dashed green;
+    /*border: 1px dashed green;*/
 }
 
 #middle {
-    margin-top: 70px;
+    margin-top: 55px;
     text-align: center;
-    border: 1px dashed blue;
+    /*border: 1px dashed blue;*/
 }
 
 .headerDiv {
     border-bottom: 2px ridge black;
     height: 5px;
-}
-
-.bottomDiv {
-    border: 1px dashed blue;
 }
 
 h1 {
@@ -93,7 +90,8 @@ img {
 
 #pointsDifficultyDiv {
     text-align: right;
-    height: 100px;
+    margin-top: 15px;
+    height: 85px;
 }
 
 #categoryTitleDiv {
@@ -118,4 +116,22 @@ img {
 
 #diffSpan {
     color: purple;
+}
+
+.correctStatusDiv, .moveOnDiv, .buttonDiv {
+    display: block;
+    float: right;
+}
+/*.buttonDiv {*/
+    /*/!*border: 1px dashed blue;*!/*/
+    /*float: right;*/
+/*}*/
+#showNumberCorrect {
+    margin-top: 20px;
+    color: red;
+}
+
+#showNextArrow img {
+    width: 70px;
+    height: 50px;
 }
