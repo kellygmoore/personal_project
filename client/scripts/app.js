@@ -67,7 +67,6 @@ myApp.controller('MainCtrl', ["$scope", function($scope) {
             $scope.trueOrFalse = true;
         }
         console.log("The counter is at: ", $scope.counter);
-        //return $scope.counter;
     }
 
 }]);
@@ -77,7 +76,12 @@ myApp.controller('InstructionsCtrl', ["$scope", function($scope) {
     $scope.flip = true;
 
     $scope.showInstructions = function(){
-        $scope.flip = false;
+        $scope.flip = !$scope.flip;
     }
+
+}]);
+
+myApp.controller('CategoryCtrl', ["$scope", function($scope){
+
 
 }]);

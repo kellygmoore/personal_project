@@ -1,0 +1,30 @@
+<div ng-controller="CategoryCtrl">
+
+    <div class="mainBody container">
+        <div class="row">
+            <div id="logoDiv" class="col-md-2">
+                <img src="/assets/views/Drawing.png" alt="logo">
+            </div>
+            <div id="categoryTitleDiv" class="col-md-6">
+                <p>Choose A Category</p>
+            </div>
+            <div id="pointsDifficultyDiv" class="col-md-2">
+                <p>Total Points <span id="ptsSpan">###</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 headerDiv"></div>
+        </div>
+
+        <div id="categoryListDiv" class="row">
+            <div class="col-md-10">
+                <!-- ng-repeat to list categories?  Pull from database??-->
+                <h3><a href="">Science</a></h3>
+                <h3><a href="">Sports</a></h3>
+                <h3><a href="">Animals</a></h3>
+                <h3><a href="">History</a></h3>
+                <h3><a href="">Geography</a></h3>
+            </div>
+        </div>
+    </div>
+</div>
