@@ -1,10 +1,30 @@
 <div ng-controller="MainCtrl">
-    <div ng-include="'/assets/views/templates/header.html'"></div>
+    <!--<div ng-include="'/assets/views/templates/header.html'"></div>-->
+    <div class="container">
+        <div class="row">
+            <div id="logoDiv" class="col-md-2">
+                <img src="/assets/views/Drawing.png" alt="logo">
+            </div>
+            <div id="categoryTitleDiv" class="col-md-6">
+                <p>Geography</p>
+            </div>
+            <div id="pointsDifficultyDiv" class="col-md-2">
+                <p>Points <span class="ptsSpan">{{pointsTotal}}</span></p>
+                <p>Difficulty <span id="diffSpan">2</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 headerDiv">
+            </div>
+        </div>
+    </div>
+
     <div class="mainBody">
         <div class="gameDiv row">
             <div id="middle" class="col-md-4">
                 <h1>Put these U.S. cities inOrder from west to east:</h1>
-                <div class="buttonDiv" ng-model="answerSolution">
+                <div class="buttonDiv">
+                    <!--ng-model="answerSolution"-->
                     <button class="buttonClass" ng-click="checkAnswers()">Check Order</button><br>
                 </div>
                 <div class="correctStatusDiv">

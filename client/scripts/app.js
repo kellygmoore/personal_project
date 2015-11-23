@@ -52,9 +52,17 @@ myApp.controller('MainCtrl', ["$scope", function($scope) {
 
     $scope.trueOrFalse = true;
     $scope.showNextArrow = true;
+    $scope.pointsTotal = 200;
 
     $scope.checkAnswers = function() {
         $scope.counter = 0;
+        $scope.pointsTotal -= 50;
+        if($scope.pointsTotal === 0){
+            //make it stop
+        }
+
+
+        console.log("Points total here after click:", $scope.pointsTotal);
         $scope.trueOrFalse = false;
         for(i=0; i<$scope.question1.length; i++){
             if ($scope.question1[i].id === (i+1)) {
@@ -85,3 +93,4 @@ myApp.controller('CategoryCtrl', ["$scope", function($scope){
 
 
 }]);
+

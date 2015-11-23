@@ -115,12 +115,20 @@ img {
     height: 100px;
 }
 
-#ptsSpan {
+.ptsSpan {
     color: darkblue;
 }
 
 #diffSpan {
     color: purple;
+}
+
+#green {
+    color: darkgreen;
+}
+
+#orange {
+    color: orangered;
 }
 
 .correctStatusDiv, .moveOnDiv, .buttonDiv {
@@ -138,7 +146,7 @@ img {
     height: 50px;
 }
 
-#loginOrRegisterDiv {
+.loginOrRegisterDiv {
     text-align: center;
 }
 
@@ -154,7 +162,7 @@ img {
     /*color: red;*/
 }
 
-#categoryListDiv {
+.categoryListDiv {
     text-align: center;
     margin: 50px auto;
 }
