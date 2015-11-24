@@ -19,7 +19,7 @@
         <div class="categoryListDiv row">
             <div class="col-md-10">
                 <div ng-repeat="cat in inorderArray" ng-if="cat.category != null">
-                    <h3><a href="#questionpage">{{cat.category}}</a></h3>
+                    <h3><a ng-click="playCategory(cat)" href="#questionpage">{{cat.category}}</a></h3>
                 </div>
             </div>
         </div>

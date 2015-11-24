@@ -9,9 +9,13 @@ module.exports = function(grunt){
                 src: 'client/scripts/*.js',
                 dest: 'server/public/assets/scripts/app.min.js'
             },
-            controller: {
+            controllers: {
                 src: 'client/scripts/controllers/*.js',
-                dest: 'server/public/assets/scripts/controllers.min.js'
+                dest: 'server/public/assets/scripts/controllers/controller.min.js'
+            },
+            factories: {
+                src: 'client/scripts/factories/*.js',
+                dest: "server/public/assets/scripts/factories/data.min.js"
             }
         },
         copy: {

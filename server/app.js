@@ -1,35 +1,17 @@
 var express = require("express");
 var app = express();
-var path = require('path');
 var pg = require('pg');
+
+var data = require('./routes/data');
+var index = require('./routes/index');
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/inorder_game_db';
 
 app.set("port", process.env.PORT || 5000);
 
-//get category from database
-//app.get('/category', function(req, res){
-//
-//    var catArray = [];
-//
-//    pg.connect(connectionString, function(err, client, done){
-//
-//        var query = client.query("SELECT id, category FROM inordertable");
-//
-//        query.on('row', function(row){
-//            catArray.push(row);
-//        });
-//
-//        query.on('end', function(){
-//            client.end();
-//            return res.json(catArray);
-//        });
-//
-//        if(err) console.log(err);
-//
-//    });
-//
-//});
+app.use('/data', data);
+app.use('/', index);
+
 
 app.get('/trivia', function(req, res){
 
@@ -55,12 +37,6 @@ app.get('/trivia', function(req, res){
 
 });
 
-
-
-app.get("/*", function(req,res,next){
-    var file = req.params[0] || "/assets/views/index.html";
-    res.sendFile(path.join(__dirname, "./public/", file));
-});
 
 app.listen(app.get("port"), function(req,res,next){
     console.log("Listening on port: " + app.get("port"));
