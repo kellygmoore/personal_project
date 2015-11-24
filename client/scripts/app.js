@@ -29,7 +29,6 @@ var myApp = angular.module("myApp", ['as.sortable', 'ngRoute']);
 
 myApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 
-    //$scope.triviaData = {};
     $scope.inorderArray = [];
 
     $scope.getTrivia = function(){
@@ -44,8 +43,10 @@ myApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
         containment: '#sortable-container'
     };
 
-
-
+    //$scope.catNameArray = [];
+    //for(i=0; i<inorderArray.length; i++){
+    //    $scope.catNameArray[i] = inorderArray[i].category;
+    //}
 
     $scope.trueOrFalse = true;
     $scope.showNextArrow = true;
@@ -57,7 +58,6 @@ myApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
         if($scope.pointsTotal === 0){
             //make it stop
         }
-
 
         console.log("Points total here after click:", $scope.pointsTotal);
         $scope.trueOrFalse = false;
@@ -76,6 +76,7 @@ myApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 
 }]);
 
+//controller to display toggle on instructions on start page
 myApp.controller('InstructionsCtrl', ["$scope", function($scope) {
 
     $scope.flip = true;
@@ -86,24 +87,17 @@ myApp.controller('InstructionsCtrl', ["$scope", function($scope) {
 
 }]);
 
-myApp.controller('CategoryCtrl', ["$scope", function($scope){
+//populates categories from db to the Category page
+//myApp.controller('CatCtrl', ["$scope", "$http", function($scope, $http) {
+//    $scope.categoryArray = [];
+//    console.log($scope.categoryArray);
+//
+//    $scope.getCat = function () {
+//        $http.get('/category').then(function (response) {
+//            $scope.categoryArray = response.data;
+//        });
+//    };
+//
+//    $scope.getCat();
+//}]);
 
-
-}]);
-
-//$scope.question1 = [{
-//    name: 'Honolulu',
-//    id: 1
-//}, {
-//    name: 'Dayton',
-//    id: 4
-//}, {
-//    name: 'Fargo',
-//    id: 3
-//}, {
-//    name: 'Phoenix',
-//    id: 2
-//}, {
-//    name: 'Washington D.C.',
-//    id: 5
-//}];

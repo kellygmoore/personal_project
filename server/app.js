@@ -7,7 +7,30 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/in
 
 app.set("port", process.env.PORT || 5000);
 
-//get data from database
+//get category from database
+//app.get('/category', function(req, res){
+//
+//    var catArray = [];
+//
+//    pg.connect(connectionString, function(err, client, done){
+//
+//        var query = client.query("SELECT id, category FROM inordertable");
+//
+//        query.on('row', function(row){
+//            catArray.push(row);
+//        });
+//
+//        query.on('end', function(){
+//            client.end();
+//            return res.json(catArray);
+//        });
+//
+//        if(err) console.log(err);
+//
+//    });
+//
+//});
+
 app.get('/trivia', function(req, res){
 
     var triviaArray = [];

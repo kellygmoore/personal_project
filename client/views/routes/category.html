@@ -16,15 +16,17 @@
             <div class="col-md-10 headerDiv"></div>
         </div>
 
-        <div class="categoryListDiv" class="row">
+        <div class="categoryListDiv row">
             <div class="col-md-10">
-                <!-- ng-repeat to list categories?  Pull from database??-->
-                <h3><a href="#questionpage">{{inorderArray[0].category}}</a></h3>
-                <h3><a href="">{{inorderArray[5].category}}</a></h3>
-                <h3><a href="">{{inorderArray[10].category}}</a></h3>
-                <h3><a href="">{{inorderArray[15].category}}</a></h3>
-                <h3><a href="">{{inorderArray[20].category}}</a></h3>
+                <div ng-repeat="cat in inorderArray" ng-if="cat.category != null">
+                    <h3><a href="#questionpage">{{cat.category}}</a></h3>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
+
+
+
+
