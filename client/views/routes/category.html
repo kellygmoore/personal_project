@@ -1,4 +1,4 @@
-<div ng-controller="CategoryCtrl">
+<div ng-controller="MainCtrl">
 
     <div class="mainBody container">
         <div class="row">
@@ -19,11 +19,11 @@
         <div class="categoryListDiv" class="row">
             <div class="col-md-10">
                 <!-- ng-repeat to list categories?  Pull from database??-->
-                <h3><a href="">Science</a></h3>
-                <h3><a href="">Sports</a></h3>
-                <h3><a href="">Animals</a></h3>
-                <h3><a href="">History</a></h3>
-                <h3><a href="">Geography</a></h3>
+                <h3><a href="#questionpage">{{inorderArray[0].category}}</a></h3>
+                <h3><a href="">{{inorderArray[5].category}}</a></h3>
+                <h3><a href="">{{inorderArray[10].category}}</a></h3>
+                <h3><a href="">{{inorderArray[15].category}}</a></h3>
+                <h3><a href="">{{inorderArray[20].category}}</a></h3>
             </div>
         </div>
     </div>

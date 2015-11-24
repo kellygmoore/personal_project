@@ -27,28 +27,25 @@ var myApp = angular.module("myApp", ['as.sortable', 'ngRoute']);
         })
 }]);
 
-myApp.controller('MainCtrl', ["$scope", function($scope) {
+myApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 
-    $scope.question1 = [{
-        name: 'Honolulu',
-        id: 1
-    }, {
-        name: 'Dayton',
-        id: 4
-    }, {
-        name: 'Fargo',
-        id: 3
-    }, {
-        name: 'Phoenix',
-        id: 2
-    }, {
-        name: 'Washington D.C.',
-        id: 5
-    }];
+    //$scope.triviaData = {};
+    $scope.inorderArray = [];
+
+    $scope.getTrivia = function(){
+        $http.get('/trivia').then(function(response){
+            $scope.inorderArray = response.data;
+        });
+    };
+
+    $scope.getTrivia();
 
     $scope.sortableOptions = {
         containment: '#sortable-container'
     };
+
+
+
 
     $scope.trueOrFalse = true;
     $scope.showNextArrow = true;
@@ -85,7 +82,7 @@ myApp.controller('InstructionsCtrl', ["$scope", function($scope) {
 
     $scope.showInstructions = function(){
         $scope.flip = !$scope.flip;
-    }
+    };
 
 }]);
 
@@ -94,3 +91,19 @@ myApp.controller('CategoryCtrl', ["$scope", function($scope){
 
 }]);
 
+//$scope.question1 = [{
+//    name: 'Honolulu',
+//    id: 1
+//}, {
+//    name: 'Dayton',
+//    id: 4
+//}, {
+//    name: 'Fargo',
+//    id: 3
+//}, {
+//    name: 'Phoenix',
+//    id: 2
+//}, {
+//    name: 'Washington D.C.',
+//    id: 5
+//}];
