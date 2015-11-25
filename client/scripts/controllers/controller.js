@@ -1,17 +1,21 @@
 myApp.controller('MainCtrl', ["$scope", "ShareData", function($scope, ShareData) {
 
     $scope.trivia = [];
-    //$scope.inorderArray = [];
+
     $scope.shareData = ShareData;
 
     if($scope.shareData.triviaData() === undefined){
-        $scope.shareData.retrieveData();
+        $scope.shareData.retrieveData()
+            .then(function() {
+                $scope.trivia = $scope.shareData.triviaData();
+            });
+    } else {
+        $scope.trivia = $scope.shareData.triviaData();
     }
 
-    $scope.trivia = $scope.shareData.triviaData();
+    //console.log("Base Async: ", $scope.shareData.triviaData());
 
-    console.log("Base Async: ", $scope.shareData.triviaData());
-
+    //part of the ng-sortable
     $scope.sortableOptions = {
         containment: '#sortable-container'
     };
